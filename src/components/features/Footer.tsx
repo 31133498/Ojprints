@@ -9,21 +9,21 @@ export const Footer: React.FC = () => {
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <div className="text-primary">
-                <span className="material-symbols-outlined text-3xl">terminal</span>
+                <span className="material-symbols-outlined text-3xl">palette</span>
               </div>
               <h2 className="text-white font-display text-2xl font-bold tracking-tight">
-                The Cracked Dev
+                ÖjPrïñts
               </h2>
             </div>
             <p className="text-slate-400 max-w-sm mb-8">
-              Building intelligent systems that push the boundaries of human potential. 
-              Focused on AI for Social Impact and Technical Excellence.
+              Ethical Design for a Better Visual World 🌎. 
+              Creating purposeful graphics that communicate truth and inspire positive change.
             </p>
             <div className="flex gap-4">
               <motion.a 
                 whileHover={{ scale: 1.1 }}
                 className="h-10 w-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" 
-                href="https://github.com/31133498"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="GitHub"
@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
               <motion.a 
                 whileHover={{ scale: 1.1 }}
                 className="h-10 w-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" 
-                href="https://www.linkedin.com/in/sanni-shazily-bba942266/?skipRedirect=true"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="LinkedIn"
@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
               <motion.a 
                 whileHover={{ scale: 1.1 }}
                 className="h-10 w-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" 
-                href="mailto:sannishazily@gmail.com"
+                href="mailto:ojoemmanuel@example.com"
                 title="Email"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
               <motion.a 
                 whileHover={{ scale: 1.1 }}
                 className="h-10 w-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" 
-                href="https://www.youtube.com/@ShazdTechbro"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="YouTube"
@@ -73,8 +73,8 @@ export const Footer: React.FC = () => {
             <div className="w-20 h-20 rounded-full border-2 border-primary/30 overflow-hidden">
               <img 
                 className="w-full h-full object-cover" 
-                alt="Sanni Shazily Oladipupo" 
-                src="/Passports  (1).jpg"
+                alt="Ojo Emmanuel Olasunkanmi" 
+                src="/ojo-profile.jpg"
               />
             </div>
           </div>
@@ -85,10 +85,10 @@ export const Footer: React.FC = () => {
             </h5>
             <ul className="space-y-4 text-slate-400">
               <li><a className="hover:text-primary transition-colors" href="#about">About Me</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#projects">Project Gallery</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#skills">Tech Stack</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#timeline">Career Timeline</a></li>
-              <li><a className="hover:text-primary transition-colors" href="https://github.com/31133498" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a className="hover:text-primary transition-colors" href="#projects">Design Portfolio</a></li>
+              <li><a className="hover:text-primary transition-colors" href="#skills">Design Tools</a></li>
+              <li><a className="hover:text-primary transition-colors" href="#timeline">Journey</a></li>
+              <li><a className="hover:text-primary transition-colors" href="#" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
             </ul>
           </div>
           
@@ -99,15 +99,15 @@ export const Footer: React.FC = () => {
             <ul className="space-y-4 text-slate-400">
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary text-sm">mail</span>
-                <a href="mailto:sannishazily@gmail.com" className="hover:text-primary transition-colors">sannishazily@gmail.com</a>
+                <a href="mailto:ojoemmanuel@example.com" className="hover:text-primary transition-colors">ojoemmanuel@example.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary text-sm">location_on</span>
-                Lagos, Nigeria
+                Akure, Nigeria
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary text-sm">play_circle</span>
-                <a href="https://www.youtube.com/@ShazdTechbro" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">YouTube</a>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Portfolio</a>
               </li>
             </ul>
           </div>
@@ -115,10 +115,10 @@ export const Footer: React.FC = () => {
         
         <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-slate-500 text-sm">
-            © 2025 Sanni Shazily Oladipupo. All rights reserved.
+            © 2025 Ojo Emmanuel Olasunkanmi. All rights reserved.
           </p>
           <p className="text-slate-500 text-sm font-display italic">
-            Designed with <span className="text-primary tracking-tighter">&lt;Code /&gt;</span> and Scholarly Rigor.
+            Designed with <span className="text-primary tracking-tighter">&lt;Ethics /&gt;</span> and Creative Purpose.
           </p>
         </div>
       </div>

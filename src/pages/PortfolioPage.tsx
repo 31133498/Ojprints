@@ -2,7 +2,6 @@ import React from 'react';
 import { Header } from '../components/features/Header';
 import { HeroSection } from '../components/features/HeroSection';
 import { ProjectsSection } from '../components/features/ProjectsSection';
-import { AchievementsSection } from '../components/features/AchievementsSection';
 import { SkillsSection } from '../components/features/SkillsSection';
 import { TimelineSection } from '../components/features/TimelineSection';
 import { ContactSection } from '../components/features/ContactSection';
@@ -15,7 +14,6 @@ export const PortfolioPage: React.FC = () => {
       <main>
         <HeroSection />
         <ProjectsSection />
-        <AchievementsSection />
         <SkillsSection />
         <TimelineSection />
         <ContactSection />

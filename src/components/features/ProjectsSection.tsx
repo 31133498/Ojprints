@@ -39,7 +39,7 @@ export const ProjectsSection: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="text-slate-900 dark:text-white text-4xl md:text-5xl font-display font-bold mb-6"
           >
-            AI & Machine Learning Projects
+            Design Portfolio Projects
           </motion.h3>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ export const ProjectsSection: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
           >
-            Production-ready AI applications solving real-world problems in healthcare, education, and social impact.
+            Creative design projects showcasing ethical visual communication and purposeful graphic design solutions.
           </motion.p>
         </div>
         
@@ -64,11 +64,11 @@ export const ProjectsSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-primary hover:underline font-display font-medium inline-flex items-center gap-2" 
-            href="https://github.com/31133498"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View All Projects on GitHub
+            View All Design Projects
             <span className="material-symbols-outlined text-sm">open_in_new</span>
           </motion.a>
         </div>

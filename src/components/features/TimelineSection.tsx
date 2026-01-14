@@ -11,23 +11,23 @@ interface TimelineMilestone {
 
 const milestones: TimelineMilestone[] = [
   {
-    phase: "PHASE 1: THE SPARK",
-    title: "The Broken Phone Hardware",
-    description: "Starting with limited resources, a broken smartphone became the catalyst for deep technical curiosity. Learning the fundamentals of logic and computation without a proper PC.",
-    icon: "cell_tower",
+    phase: "PHASE 1: THE DISCOVERY",
+    title: "Age 13: The Design Awakening",
+    description: "Discovering the power of visual communication through colors, shapes, and layout. The moment when curiosity transformed into commitment to graphic design as a creative expression tool.",
+    icon: "lightbulb",
     isActive: true
   },
   {
-    phase: "PHASE 2: ACADEMIC RIGOR", 
-    title: "The 5.0 GPA Pursuit",
-    description: "Transforming resilience into academic excellence. A relentless commitment to maintaining the highest possible GPA while building real-world AI applications.",
-    icon: "school"
+    phase: "PHASE 2: SKILL MASTERY", 
+    title: "Mastering the Creative Tools",
+    description: "Dedicated learning of CorelDRAW for vector graphics and Adobe Photoshop for image manipulation. Building foundation skills in Microsoft Office Suite for professional communication.",
+    icon: "palette"
   },
   {
-    phase: "PHASE 3: SOCIAL IMPACT",
-    title: "Architecting the Future", 
-    description: "Developing DermaScan and Ilmeen. Applying high-level AI engineering to solve systemic problems in healthcare and education across the continent.",
-    icon: "rocket_launch"
+    phase: "PHASE 3: ETHICAL VISION",
+    title: "Building ÖjPrïñts Brand", 
+    description: "Establishing ÖjPrïñts with the mission of 'Ethical Design for a Better Visual World 🌎'. Combining Mathematical Sciences studies at FUTA with creative practice for structured, purposeful design.",
+    icon: "public"
   }
 ];
 
@@ -42,7 +42,7 @@ export const TimelineSection: React.FC = () => {
             viewport={{ once: true }}
             className="text-primary font-display text-sm font-bold uppercase tracking-widest mb-3 italic"
           >
-            // Growth Logs
+            // Creative Journey
           </motion.h2>
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export const TimelineSection: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="text-slate-900 dark:text-white text-4xl font-display font-bold"
           >
-            The Journey Tracker
+            The Design Evolution
           </motion.h3>
         </div>
         

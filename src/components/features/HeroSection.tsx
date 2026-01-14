@@ -21,7 +21,7 @@ export const HeroSection: React.FC = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
               </span>
               <span className="text-xs font-bold font-display uppercase tracking-widest">
-                Available for Collaboration
+                Available for Design Projects
               </span>
             </motion.div>
             
@@ -31,7 +31,7 @@ export const HeroSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-6xl md:text-8xl font-display font-black text-white leading-tight tracking-tighter mb-6"
             >
-              The <span className="text-primary italic">Cracked</span> Dev.
+              ÖjPrï<span className="text-primary italic">ñts</span>.
             </motion.h1>
             
             <motion.p 
@@ -40,9 +40,9 @@ export const HeroSection: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl md:text-2xl text-slate-300 leading-relaxed font-light mb-10 max-w-2xl"
             >
-              From navigating the world with a broken phone to pursuing a{' '}
-              <span className="text-primary font-medium">5.0 GPA goal</span>. 
-              <strong>Sanni Shazily Oladipupo</strong>: AI Engineer and Data Scientist driven by technical excellence and massive social impact.
+              From discovering design at age 13 to mastering{' '}
+              <span className="text-primary font-medium">ethical visual communication</span>. 
+              <strong>Ojo Emmanuel Olasunkanmi</strong>: Graphic Designer and Mathematical Sciences student creating purposeful designs for a better visual world.
             </motion.p>
             
             <motion.div 
@@ -52,11 +52,11 @@ export const HeroSection: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Button variant="primary" size="lg">
-                View My Journey
+                View My Designs
                 <span className="material-symbols-outlined">arrow_forward</span>
               </Button>
               <Button variant="secondary" size="lg">
-                Latest Projects
+                Design Portfolio
               </Button>
             </motion.div>
           </div>
@@ -67,16 +67,16 @@ export const HeroSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex justify-center lg:justify-end relative z-20"
           >
-            <div className="relative cursor-pointer" onClick={() => window.open('https://www.linkedin.com/in/sanni-shazily-bba942266/?skipRedirect=true', '_blank')}>
+            <div className="relative cursor-pointer" onClick={() => window.open('#', '_blank')}>
               <div className="w-80 h-80 rounded-full border-4 border-primary/30 overflow-hidden shadow-2xl shadow-primary/20 hover:scale-105 transition-transform">
                 <img 
                   className="w-full h-full object-cover" 
-                  alt="Sanni Shazily Oladipupo - The Cracked Dev" 
-                  src="/Passports  (1).jpg"
+                  alt="Ojo Emmanuel Olasunkanmi - ÖjPrïñts Designer" 
+                  src="/ojo-profile.jpg"
                 />
               </div>
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center animate-pulse">
-                <span className="material-symbols-outlined text-background-dark text-2xl">code</span>
+                <span className="material-symbols-outlined text-background-dark text-2xl">palette</span>
               </div>
             </div>
           </motion.div>

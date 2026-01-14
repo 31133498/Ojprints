@@ -1,8 +1,19 @@
-# The Cracked Dev Portfolio
+# ÖjPrïñts Portfolio
 
-A production-grade React portfolio application for Sanni Shazily Oladipupo, showcasing AI/ML projects and technical expertise.
+A production-grade React portfolio application for Ojo Emmanuel Olasunkanmi, showcasing graphic design projects and creative expertise.
 
-## 🚀 Tech Stack
+## 🎨 About ÖjPrïñts
+
+**"Ethical Design for a Better Visual World 🌎"**
+
+This portfolio represents the creative journey of Ojo Emmanuel Olasunkanmi, a passionate graphic designer and Mathematical Sciences student at FUTA. The brand ÖjPrïñts embodies the commitment to ethical design principles and purposeful visual communication.
+
+## 🎨 Design Focus
+
+- **Primary Tools**: CorelDRAW, Adobe Photoshop
+- **Specialties**: Brand Identity, Print Design, Digital Marketing
+- **Philosophy**: Ethical design principles with mathematical precision
+- **Education**: Mathematical Sciences at Federal University of Technology, Akure (FUTA)
 
 - **React 18.2** with TypeScript
 - **Vite** for build tooling
@@ -63,22 +74,25 @@ src/
 - **Spacing**: 8px base unit system
 - **Animations**: Framer Motion with 150-300ms transitions
 - **Responsive**: Mobile-first approach
+- **Theme**: Design-focused with ethical principles
 
-## 🔧 Features
+## 💼 Features
 
 - ✅ Fully responsive design
 - ✅ Dark mode optimized
 - ✅ Smooth animations and transitions
 - ✅ Accessible navigation
-- ✅ Loading states with skeleton screens
+- ✅ Design portfolio showcase
+- ✅ Creative timeline
+- ✅ Ethical design principles
 - ✅ TypeScript throughout
 - ✅ Production-ready build
 
-## 🌐 Live Projects
+## 🌎 Live Portfolio
 
-- **DermaScan AI**: https://derma-scan-ai.vercel.app/
-- **Veritas AI**: https://veritas-ai-dcfw.vercel.app/
-- **Ilmeen**: https://ilmeen.vercel.app/
+- **Main Portfolio**: [Coming Soon]
+- **Design Showcase**: [Coming Soon]
+- **Brand Gallery**: [Coming Soon]
 
 ## 📱 Browser Support
 

@@ -9,19 +9,19 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "AI & Machine Learning",
-    icon: "psychology",
-    skills: ["PyTorch", "TensorFlow", "NLP", "Computer Vision", "Scikit-learn"]
+    title: "Design Software",
+    icon: "palette",
+    skills: ["CorelDRAW", "Adobe Photoshop", "Canva", "GIMP", "Figma"]
   },
   {
-    title: "Data Engineering", 
-    icon: "monitoring",
-    skills: ["Pandas", "SQL", "Matplotlib", "R Programming", "Apache Spark"]
+    title: "Office Suite", 
+    icon: "description",
+    skills: ["Microsoft Word", "Excel", "PowerPoint", "Google Workspace", "PDF Design"]
   },
   {
-    title: "Development",
-    icon: "code", 
-    skills: ["Next.js", "FastAPI", "Docker", "AWS", "CI/CD"]
+    title: "Design Specialties",
+    icon: "brush", 
+    skills: ["Brand Identity", "Print Design", "Digital Marketing", "Photo Editing", "Typography"]
   }
 ];
 
@@ -36,7 +36,7 @@ export const SkillsSection: React.FC = () => {
             viewport={{ once: true }}
             className="text-primary font-display text-sm font-bold uppercase tracking-widest mb-3 italic"
           >
-            // Knowledge Graph
+            // Design Toolkit
           </motion.h2>
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
@@ -45,7 +45,7 @@ export const SkillsSection: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="text-slate-900 dark:text-white text-4xl md:text-5xl font-display font-bold mb-6"
           >
-            Technical Arsenal
+            Design Arsenal
           </motion.h3>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -54,7 +54,7 @@ export const SkillsSection: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
           >
-            Categorized expertise built through thousands of hours of coding and theoretical research.
+            Mastered tools and techniques built through years of creative practice and ethical design principles.
           </motion.p>
         </div>
         
