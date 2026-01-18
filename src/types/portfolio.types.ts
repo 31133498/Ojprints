@@ -4,8 +4,10 @@ export interface Project {
   title: string;
   description: string;
   image: string;
+  thumbnailImage?: string;
   technologies: string[];
   link?: string;
+  createdTime?: string;
 }
 
 export interface SkillCategory {

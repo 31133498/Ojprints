@@ -23,11 +23,15 @@ This portfolio represents the creative journey of Ojo Emmanuel Olasunkanmi, a pa
 - **React Hot Toast** for notifications
 - **Zustand** for client state (ready for implementation)
 
-## 📦 Installation
+## 🚀 Quick Start
 
 ```bash
 # Install dependencies
 npm install
+
+# Set up Google Drive integration (optional)
+cp .env.example .env
+# Add your Google Drive API key to .env
 
 # Start development server
 npm run dev
@@ -38,6 +42,19 @@ npm run build
 # Preview production build
 npm run preview
 ```
+
+## 🖼️ Google Drive Portfolio Integration
+
+This portfolio dynamically loads design images from Google Drive! See [GOOGLE_DRIVE_SETUP.md](./GOOGLE_DRIVE_SETUP.md) for complete setup instructions.
+
+**Current Drive Folder**: [ÖjPrïñts Design Portfolio](https://drive.google.com/drive/folders/1Aquqwlf-wsV3RhXKSdMeoUYe4uP4J_05)
+
+### Key Benefits:
+- 🔄 **Auto-updating**: Add images to Drive folder → They appear on website automatically
+- ⚡ **Performance**: Lazy loading, thumbnails, and Google's CDN
+- 📱 **Responsive**: Perfect scaling on all devices
+- 🔍 **Lightbox**: Click any image for full-size viewing
+- 🎨 **Smart Categorization**: Automatic project titles and tags from filenames
 
 ## 🏗️ Project Structure
 
@@ -78,15 +95,17 @@ src/
 
 ## 💼 Features
 
-- ✅ Fully responsive design
-- ✅ Dark mode optimized
-- ✅ Smooth animations and transitions
-- ✅ Accessible navigation
-- ✅ Design portfolio showcase
-- ✅ Creative timeline
-- ✅ Ethical design principles
-- ✅ TypeScript throughout
-- ✅ Production-ready build
+- ✅ **Dynamic Google Drive Integration** - Images automatically load from Google Drive folder
+- ✅ **Auto-updating Portfolio** - New images appear automatically without code changes
+- ✅ **Lazy Loading & Performance** - Optimized image loading with thumbnails
+- ✅ **Lightbox Viewing** - Full-size image viewing with smooth animations
+- ✅ **Responsive Design** - Mobile-first approach with perfect scaling
+- ✅ **Smart Metadata** - Automatic project categorization from filenames
+- ✅ **Fallback System** - Graceful degradation to mock data if needed
+- ✅ **Dark Mode Optimized** - Beautiful in both light and dark themes
+- ✅ **Accessible Navigation** - Full keyboard and screen reader support
+- ✅ **TypeScript Throughout** - Type-safe development experience
+- ✅ **Production Ready** - Optimized build with CDN-like performance
 
 ## 🌎 Live Portfolio
 
