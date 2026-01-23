@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { usePortfolioCategories } from '../../api/usePortfolioCategories';
-import { DriveCategory, DriveProject } from '../../api/googleDriveService';
+import { DriveProject } from '../../api/googleDriveService';
 import { LazyImage } from '../ui/LazyImage';
 import { Lightbox } from '../ui/Lightbox';
 

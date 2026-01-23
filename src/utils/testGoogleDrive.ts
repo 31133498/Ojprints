@@ -1,19 +1,18 @@
-import { fetchGoogleDriveImages } from '../api/googleDriveService';
+import { fetchGoogleDriveCategories } from '../api/googleDriveService';
 import '../utils/testFolderAccess';
 
 export const testGoogleDriveIntegration = async () => {
   console.log('🔍 Testing Google Drive integration...');
   
-  // First run the folder access test
   if ((window as any).testFolderAccess) {
     await (window as any).testFolderAccess();
   }
   
   try {
-    const projects = await fetchGoogleDriveImages();
+    const categories = await fetchGoogleDriveCategories();
     
-    if (projects.length === 0) {
-      console.warn('⚠️ No images found in Google Drive folder');
+    if (categories.length === 0) {
+      console.warn('⚠️ No categories found in Google Drive folder');
       console.log('📁 Folder ID: 1Aquqwlf-wsV3RhXKSdMeoUYe4uP4J_05');
       console.log('🔗 Folder URL: https://drive.google.com/drive/folders/1Aquqwlf-wsV3RhXKSdMeoUYe4uP4J_05');
       console.log('💡 Make sure:');
@@ -23,12 +22,12 @@ export const testGoogleDriveIntegration = async () => {
       return;
     }
     
-    console.log(`✅ Successfully loaded ${projects.length} images from Google Drive`);
-    console.table(projects.map(p => ({
-      title: p.title,
-      technologies: p.technologies.join(', '),
-      hasImage: !!p.image,
-      hasThumbnail: !!p.thumbnailImage
+    const totalImages = categories.reduce((sum, cat) => sum + cat.count, 0);
+    console.log(`✅ Successfully loaded ${categories.length} categories with ${totalImages} total images`);
+    console.table(categories.map((cat: any) => ({
+      name: cat.name,
+      count: cat.count,
+      hasImages: cat.images.length > 0
     })));
     
   } catch (error) {
