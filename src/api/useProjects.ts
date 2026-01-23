@@ -15,26 +15,12 @@ export interface Project {
 }
 
 const fetchProjects = async (): Promise<Project[]> => {
-  try {
-    // Try to fetch from Google Drive first
-    const driveProjects = await fetchGoogleDriveImages();
-    
-    if (driveProjects.length > 0) {
-      return driveProjects.map(project => ({
-        ...project,
-        thumbnailImage: project.thumbnailImage
-      }));
-    }
-    
-    // Fallback to mock data if no Drive images
-    await new Promise(resolve => setTimeout(resolve, 800));
-    return projectsData;
-  } catch (error) {
-    console.error('Error fetching projects:', error);
-    // Fallback to mock data on error
-    await new Promise(resolve => setTimeout(resolve, 800));
-    return projectsData;
-  }
+  const driveProjects = await fetchGoogleDriveImages();
+  
+  return driveProjects.map(project => ({
+    ...project,
+    thumbnailImage: project.thumbnailImage
+  }));
 };
 
 export const useProjects = () => {

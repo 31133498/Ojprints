@@ -46,7 +46,7 @@ export const Lightbox: React.FC<LightboxProps> = ({
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            transition={{ type: "spring", damping: 20, stiffness: 300 }}
             className="relative max-w-7xl max-h-[90vh] w-full"
             onClick={(e) => e.stopPropagation()}
           >

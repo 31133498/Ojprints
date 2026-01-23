@@ -1,7 +1,13 @@
 import { fetchGoogleDriveImages } from '../api/googleDriveService';
+import '../utils/testFolderAccess';
 
 export const testGoogleDriveIntegration = async () => {
   console.log('🔍 Testing Google Drive integration...');
+  
+  // First run the folder access test
+  if ((window as any).testFolderAccess) {
+    await (window as any).testFolderAccess();
+  }
   
   try {
     const projects = await fetchGoogleDriveImages();
@@ -10,6 +16,10 @@ export const testGoogleDriveIntegration = async () => {
       console.warn('⚠️ No images found in Google Drive folder');
       console.log('📁 Folder ID: 1Aquqwlf-wsV3RhXKSdMeoUYe4uP4J_05');
       console.log('🔗 Folder URL: https://drive.google.com/drive/folders/1Aquqwlf-wsV3RhXKSdMeoUYe4uP4J_05');
+      console.log('💡 Make sure:');
+      console.log('1. Folder is set to "Anyone with the link can view"');
+      console.log('2. Folder contains image files');
+      console.log('3. You are signed into the correct Google account');
       return;
     }
     
@@ -21,31 +31,8 @@ export const testGoogleDriveIntegration = async () => {
       hasThumbnail: !!p.thumbnailImage
     })));
     
-    const firstProject = projects[0];
-    console.log('🖼️ Testing first image load...');
-    
-    const img = new Image();
-    img.onload = () => {
-      console.log(`✅ Image loaded successfully: ${firstProject.title}`);
-      console.log(`📐 Dimensions: ${img.width}x${img.height}`);
-    };
-    img.onerror = () => {
-      console.error(`❌ Failed to load image: ${firstProject.title}`);
-    };
-    img.src = firstProject.image;
-    
   } catch (error) {
     console.error('❌ Google Drive integration test failed:', error);
-    
-    if (error instanceof Error) {
-      if (error.message.includes('API key')) {
-        console.log('💡 Make sure to set VITE_GOOGLE_DRIVE_API_KEY in your .env file');
-      } else if (error.message.includes('403')) {
-        console.log('💡 Check that Google Drive API is enabled and API key has proper permissions');
-      } else if (error.message.includes('404')) {
-        console.log('💡 Verify the folder ID and that the folder is publicly accessible');
-      }
-    }
   }
 };
 

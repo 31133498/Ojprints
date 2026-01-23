@@ -77,11 +77,12 @@ export const LazyImage: React.FC<LazyImageProps> = ({
           transition={{ duration: 0.3 }}
           src={currentSrc}
           alt={alt}
-          className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${isLoaded ? '' : 'blur-sm'}`}
+          className={`w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 ${isLoaded ? '' : 'blur-sm'}`}
           onLoad={() => !thumbnailSrc && setIsLoaded(true)}
           onError={handleError}
           onClick={onClick}
-          loading="lazy"
+          loading="eager"
+          decoding="async"
         />
       )}
       
