@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { fetchGoogleDriveCategories } from './googleDriveService';
+import { projectsData as mockProjects } from '../mocks/projectsData';
 
 export interface Project {
   id: string;
@@ -14,14 +15,26 @@ export interface Project {
 }
 
 const fetchProjects = async (): Promise<Project[]> => {
-  const categories = await fetchGoogleDriveCategories();
-  
-  return categories.flatMap(category => 
-    category.images.map((project: any) => ({
-      ...project,
-      thumbnailImage: project.thumbnailImage
-    }))
-  );
+  try {
+    const categories = await fetchGoogleDriveCategories();
+    const projects = categories.flatMap(category => 
+      category.images.map((image: any) => ({
+        id: image.id,
+        title: image.title,
+        description: image.description,
+        image: image.image,
+        thumbnailImage: image.thumbnailImage,
+        technologies: image.technologies,
+        link: image.link,
+        number: image.number,
+        createdTime: image.createdTime
+      }))
+    );
+    return projects;
+  } catch (error) {
+    console.warn('Failed to fetch from Google Drive, using mock data:', error);
+    return mockProjects;
+  }
 };
 
 export const useProjects = () => {

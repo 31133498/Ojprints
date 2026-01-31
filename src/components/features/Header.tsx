@@ -59,8 +59,14 @@ export const Header: React.FC = () => {
         
         <div className="flex items-center gap-6">
           <Button variant="primary" size="sm">
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-              Portfolio
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open resume (PDF) in a new tab"
+              className="flex items-center gap-2"
+            >
+              Resume
             </a>
           </Button>
           <div className="h-10 w-10 rounded-full border border-primary/30 overflow-hidden">

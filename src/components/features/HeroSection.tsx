@@ -4,8 +4,9 @@ import { Button } from '../ui/Button';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-background-dark via-background-dark to-slate-900">
+    <section id="hero" className="relative min-h-[110vh] flex items-center overflow-hidden overflow-x-hidden bg-gradient-to-br from-background-dark via-background-dark to-slate-900">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,rgba(19,236,73,0.05)_1px,transparent_0)] bg-[length:40px_40px] pointer-events-none" />
+      <div className="absolute inset-0 bg-black/20 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -25,27 +26,24 @@ export const HeroSection: React.FC = () => {
               </span>
             </motion.div>
             
-            <motion.h1 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-6xl md:text-8xl font-display font-black text-white leading-tight tracking-tighter mb-6"
+              className="mb-8"
             >
-              ÖjPrï<span className="text-primary italic">ñts</span>.
-            </motion.h1>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl md:text-2xl text-slate-300 leading-relaxed font-light mb-10 max-w-2xl"
-            >
-              From discovering design at age 13 to mastering{' '}
-              <span className="text-primary font-medium">ethical visual communication</span>. 
-              <strong>Ojo Emmanuel Olasunkanmi</strong>: Graphic Designer and Mathematical Sciences student creating purposeful designs for a better visual world.
-            </motion.p>
-            
-            <motion.div 
+              <div className="w-full max-w-6xl rounded-xl overflow-hidden shadow-2xl mx-auto relative">
+                <img
+                  src="/hero-bio.jpg"
+                  alt="Ojo Emmanuel Olasunkanmi — bio"
+                  className="w-full h-[70vh] md:h-[85vh] object-cover rounded-xl"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-black/10 pointer-events-none rounded-xl" />
+              </div>
+            </motion.div>
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -60,26 +58,6 @@ export const HeroSection: React.FC = () => {
               </Button>
             </motion.div>
           </div>
-          
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex justify-center lg:justify-end relative z-20"
-          >
-            <div className="relative cursor-pointer" onClick={() => window.open('#', '_blank')}>
-              <div className="w-80 h-80 rounded-full border-4 border-primary/30 overflow-hidden shadow-2xl shadow-primary/20 hover:scale-105 transition-transform">
-                <img 
-                  className="w-full h-full object-cover" 
-                  alt="Ojo Emmanuel Olasunkanmi - ÖjPrïñts Designer" 
-                  src="/ojo-profile.jpg"
-                />
-              </div>
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center animate-pulse">
-                <span className="material-symbols-outlined text-background-dark text-2xl">palette</span>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

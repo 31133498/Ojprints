@@ -102,12 +102,19 @@ export const fetchGoogleDriveCategories = async (): Promise<DriveCategory[]> => 
   const categories: DriveCategory[] = [];
   
   for (const folder of subfolders) {
-    const imagesUrl = `https://www.googleapis.com/drive/v3/files?q='${folder.id}'+in+parents+and+(mimeType+contains+'image/')&key=${API_KEY}&fields=files(id,name,mimeType,webViewLink,thumbnailLink)`;
+    const imagesUrl = `https://www.googleapis.com/drive/v3/files?q='${folder.id}'+in+parents&key=${API_KEY}&fields=files(id,name,mimeType,webViewLink,thumbnailLink)`;
     
+    console.log(`Fetching images from ${folder.name}...`);
     const imagesResponse = await fetch(imagesUrl);
     if (imagesResponse.ok) {
       const imagesData = await imagesResponse.json();
-      const folderImages = imagesData.files || [];
+      const allFiles = imagesData.files || [];
+      console.log(`${folder.name}: Found ${allFiles.length} total files`);
+      
+      const folderImages = allFiles.filter((file: any) => 
+        file.mimeType && file.mimeType.startsWith('image/')
+      );
+      console.log(`${folder.name}: ${folderImages.length} image files`);
       
       if (folderImages.length > 0) {
         const metadata = getCategoryMetadata(folder.name);
@@ -117,8 +124,8 @@ export const fetchGoogleDriveCategories = async (): Promise<DriveCategory[]> => 
           name: image.name,
           title: metadata.title,
           description: metadata.description,
-          image: `https://lh3.googleusercontent.com/d/${image.id}=w2000`,
-          thumbnailImage: image.thumbnailLink?.replace('=s220', '=s800') || `https://lh3.googleusercontent.com/d/${image.id}=w800`,
+          image: `https://drive.google.com/thumbnail?id=${image.id}&sz=w1200`,
+          thumbnailImage: `https://drive.google.com/thumbnail?id=${image.id}&sz=w400`,
           technologies: metadata.technologies,
           link: image.webViewLink,
           category: folder.name
@@ -135,5 +142,7 @@ export const fetchGoogleDriveCategories = async (): Promise<DriveCategory[]> => 
     }
   }
   
+  console.log('Total categories:', categories.length);
+  console.log('Total images:', categories.reduce((sum, cat) => sum + cat.count, 0));
   return categories.sort((a, b) => b.count - a.count);
 };
