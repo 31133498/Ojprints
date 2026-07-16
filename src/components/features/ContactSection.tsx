@@ -42,7 +42,7 @@ export const ContactSection: React.FC = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="mailto:sannishazily@gmail.com"
+            href="mailto:ojprints2676@gmail.com"
             className="bg-primary text-background-dark px-8 py-4 rounded-lg font-display font-bold text-lg hover:brightness-110 transition-all shadow-[0_0_15px_rgba(19,236,73,0.3)] flex items-center justify-center gap-2"
           >
             <span className="material-symbols-outlined">mail</span>
@@ -51,7 +51,7 @@ export const ContactSection: React.FC = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="https://www.linkedin.com/in/sanni-shazily-bba942266/?skipRedirect=true"
+            href="https://www.linkedin.com/in/ojo-emmanuel-b46904406"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-primary/20 text-primary hover:bg-primary/5 px-8 py-4 rounded-lg font-display font-bold text-lg transition-all flex items-center justify-center gap-2"
